@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.V.R. & J.C. Study Hub</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            /* background-image: url('edu.jpg'); */
+            /* background: url("EDUQUOTE.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        } */ 
+        body {
+    font-family: Arial, sans-serif;
+    background: url("rvr.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            position: relative;
+        }
+        header img{
+            border-radius: 50%;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            width: 50px;
+            height: 50px;
+        }
+        .logo.left {
+            left: 10px;
+        }
+        .logo.right {
+            right: 10px;
+        }
+        nav {
+            background: #00509E;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .container {
+            margin: 20px auto;
+            width: 80%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            
+
+        }
+        .semester, .year, .subjects {
+            margin: 15px 0;
+            padding: 10px;
+            border-bottom: 2px solid #ccc;
+            display: none;
+        }
+        .semester a, .year a, .subjects a {
+            color: #00509E;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId) {
+            let sections = document.querySelectorAll('.semester, .year, .subjects');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="RVR Logo" class="logo left">
+        R.V.R. & J.C. College Study Resources(CSE)
+        <img src="saraswathidevi.jpg" alt="RVR Logo" class="logo right">
+    </header>
+    <nav>
+        <a onclick="toggleSection('home')">Home</a>
+        <a onclick="toggleSection('questionPapers')">Question Papers</a>
+        <a onclick="toggleSection('materials')">Materials</a>
+        <a onclick="toggleSection('notes')">Notes</a>
+        <a onclick="toggleSection('contact')">Contact</a>
+    </nav>
+    <div class="container">
+        <div id="home">
+            <h2>Welcome to R.V.R. & J.C. Study Hub</h2>
+            <p>Your one-stop destination for study materials, notes, and question papers.</p>
+        </div>
+        
+        <div id="questionPapers" class="year">
+            <h3>Question Papers</h3>
+            <a onclick="toggleSection('qp_first_year')">First Year</a>
+            <a onclick="toggleSection('qp_second_year')">Second Year</a>
+            <a onclick="toggleSection('qp_third_year')">Third Year</a>
+            <a onclick="toggleSection('qp_fourth_year')">Fourth Year</a>
+        </div>
+        
+        <div id="qp_first_year" class="semester">
+            <h3>First Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem1')">Semester 1</a>
+            <a onclick="toggleSection('subjects_sem2')">Semester 2</a>
+        </div>
+        
+        <div id="subjects_sem1" class="subjects">
+            <h3>Semester 1 Subjects</h3>
+            <a href="#">Mathematics-I</a>
+            <a href="#">Engineering Physics</a>
+            <a href="#">BasicElectrical&Electronics
+                Engineering</a>
+            <a href="#">Programming for Problem Solving</a>
+            <a href="#">Engineering Physics Lab</a>
+            <a href="#">BasicElectrical&Electronics 
+                EngineeringLab</a>
+            <a href="#">Engineering Graphics and Design Lab</a>
+            <a href="#"> Programming for Problem Solving Lab</a>
+            <a href="#">Constitution of India</a>
+            <a href="#">Three-weeks orientation program</a>
+        </div>
+        
+        <div id="subjects_sem2" class="subjects">
+            <h3>Semester 2 Subjects</h3>
+            <a href="#">Mathematics-II</a>
+            <a href="#">Engineering Chemistry</a>
+            <a href="#">DE</a>
+            <a href="#">EnglishforCommunicationSkills</a>
+            <a href="#">ProgramminginPython</a>
+            <a href="#">EngineeringChemistryLab</a>
+            <a href="#">ProgramminginPythonLab</a>
+            <a href="#">ComputerEngineeringWorkshop</a>
+            <a href="#">EnglishLanguageCommunicationSkills
+                Lab</a>
+            <a href="#">EnvironmentalScience</a>
+        </div>
+        
+        <div id="qp_second_year" class="semester">
+            <h3>Second Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem3')">Semester 3</a>
+            <a onclick="toggleSection('subjects_sem4')">Semester 4</a>
+        </div>
+        
+        <div id="subjects_sem3" class="subjects">
+            <h3>Semester 3 Subjects</h3>
+            <a href="#">ProbabilityandStatistics </a>
+            <a href="#">DiscreteMathematics</a>
+            <a href="#">ComputerOrganization</a>
+            <a href="#">DataStructures </a>
+            <a href="#">ObjectOrientedProgramming</a>
+            <a href="#">ProbabilityandStatisticswithRLab</a>
+            <a href="#">DataStructuresLab </a>
+            <a href="#">ObjectOrientedProgrammingLab</a>
+            <a href="#">SkillOrientedCourse</a>
+            <a href="#"> DesignThinking&ProductInnovation</a>
+        </div>
+        
+        <div id="subjects_sem4" class="subjects">
+            <h3>Semester 4 Subjects</h3>
+            <a href="#">ComputationalStatistics</a>
+            <a href="#">DatabaseManagementSystems</a>
+            <a href="#">OperatingSystems</a>
+            <a href="#">SoftwareEngineering</a>
+            <a href="#">WebTechnologies</a>
+            <a href="#">ComputationalStatisticsLab</a>
+            <a href="#">DatabaseManagementSystemsLab</a>
+            <a href="#">WebTechnologiesLab</a>
+            <a href="#">SkillOrientedCourse-II</a>
+            <a href="#">Ethics&HumanValues</a>
+        </div>
+
+        <div id="qp_third_year" class="semester">
+            <h3>Third Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem5')">Semester 5</a>
+            <a onclick="toggleSection('subjects_sem6')">Semester 6</a>
+        </div>
+        
+        <div id="subjects_sem5" class="subjects">
+            <h3>Semester 5 Subjects</h3>
+            <a href="#">AutomataTheory&FormalLanguages</a>
+            <a href="#">ComputerNetworks</a>
+            <a href="#">Design&AnalysisofAlgorithms</a>
+            <a href="#">ProfessionalElective-I</a>
+            <a href="#">Open/Job-orientedElective-I</a>
+            <a href="#">Design&AnalysisofAlgorithmsLab</a>
+            <a href="#">DataAnalysisLab</a>
+            <a href="#">SummerInternship</a>
+            <a href="#">SkillOrientedCourse-III</a> 
+        </div>
+        
+        <div id="subjects_sem6" class="subjects">
+            <h3>Semester 6 Subjects</h3>
+            <a href="#">ArtificialIntelligence</a>
+            <a href="#">Cryptography&NetworkSecurity</a>
+            <a href="#">MachineLearning</a>
+            <a href="#">ProfessionalElective-II</a>
+            <a href="#">Open/JobOrientedElective-II</a>
+            <a href="#">ArtificialIntelligencelab</a>
+            <a href="#">MachineLearningLab</a>
+            <a href="#">TermPaper 0 3 100 - 1.5 PR</a>
+            <a href="#">SkillOrientedCourse-IV</a> 
+        </div>
+
+        <div id="qp_fourth_year" class="semester">
+            <h3>Fourth Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem7')">Semester 7</a>
+            <a onclick="toggleSection('subjects_sem8')">Semester 8</a>
+        </div>
+        
+        <div id="subjects_sem7" class="subjects">
+            <h3>Semester 7 Subjects</h3>
+            <a href="#">HumanitiesandSocialSciences</a>
+            <a href="#">ProfessionalElective-III</a>
+            <a href="#">ProfessionalElective-IV</a>
+            <a href="#">ProfessionalElective–V(MOOCS)</a>
+            <a href="#">Open/JobOrientedElective-III</a>
+            <a href="#">Open/JobOrientedElective –IV</a>
+            <a href="#">Internship/ProfessionalCertification</a>
+            <a href="#">SkillOrientedCourse–V</a>
+        </div>
+        
+        <div id="subjects_sem8" class="subjects">
+            <h3>Semester 8 Subjects</h3>
+            <a href="#">ProjectWork 
+                (ProjectWork,Seminarandinternship)</a>
+        </div>
+        <!-- <div id="contact" class="year">
+            <h3>Name: M.Sreelatha(HOD)</h3>
+            <h3>Contact: 300</h3>
+            <h3>Email: hodcse@rvrjc.ac.in</h3>
+        </div> -->
+        <div id="materials" class="year">
+            <h3>Materials</h3>
+            <a onclick="toggleSection('qp_first_year')">First Year</a>
+            <a onclick="toggleSection('qp_second_year')">Second Year</a>
+            <a onclick="toggleSection('qp_third_year')">Third Year</a>
+            <a onclick="toggleSection('qp_fourth_year')">Fourth Year</a>
+        </div>
+        
+        <div id="qp_first_year" class="semester">
+            <h3>First Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem1')">Semester 1</a>
+            <a onclick="toggleSection('subjects_sem2')">Semester 2</a>
+        </div>
+        
+        <div id="subjects_sem1" class="subjects">
+            <h3>Semester 1 Subjects</h3>
+            <a href="#">Mathematics-I</a>
+            <a href="#">Engineering Physics</a>
+            <a href="#">BasicElectrical&Electronics
+                Engineering</a>
+            <a href="#">Programming for Problem Solving</a>
+            <a href="#">Engineering Physics Lab</a>
+            <a href="#">BasicElectrical&Electronics 
+                EngineeringLab</a>
+            <a href="#">Engineering Graphics and Design Lab</a>
+            <a href="#"> Programming for Problem Solving Lab</a>
+            <a href="#">Constitution of India</a>
+            <a href="#">Three-weeks orientation program</a>
+        </div>
+        
+        <div id="subjects_sem2" class="subjects">
+            <h3>Semester 2 Subjects</h3>
+            <a href="#">Mathematics-II</a>
+            <a href="#">Engineering Chemistry</a>
+            <a href="#">DE</a>
+            <a href="#">EnglishforCommunicationSkills</a>
+            <a href="#">ProgramminginPython</a>
+            <a href="#">EngineeringChemistryLab</a>
+            <a href="#">ProgramminginPythonLab</a>
+            <a href="#">ComputerEngineeringWorkshop</a>
+            <a href="#">EnglishLanguageCommunicationSkills
+                Lab</a>
+            <a href="#">EnvironmentalScience</a>
+        </div>
+        
+        <div id="qp_second_year" class="semester">
+            <h3>Second Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem3')">Semester 3</a>
+            <a onclick="toggleSection('subjects_sem4')">Semester 4</a>
+        </div>
+        
+        <div id="subjects_sem3" class="subjects">
+            <h3>Semester 3 Subjects</h3>
+            <a href="#">ProbabilityandStatistics </a>
+            <a href="#">DiscreteMathematics</a>
+            <a href="#">ComputerOrganization</a>
+            <a href="#">DataStructures </a>
+            <a href="#">ObjectOrientedProgramming</a>
+            <a href="#">ProbabilityandStatisticswithRLab</a>
+            <a href="#">DataStructuresLab </a>
+            <a href="#">ObjectOrientedProgrammingLab</a>
+            <a href="#">SkillOrientedCourse</a>
+            <a href="#"> DesignThinking&ProductInnovation</a>
+        </div>
+        
+        <div id="subjects_sem4" class="subjects">
+            <h3>Semester 4 Subjects</h3>
+            <a href="#">ComputationalStatistics</a>
+            <a href="#">DatabaseManagementSystems</a>
+            <a href="#">OperatingSystems</a>
+            <a href="#">SoftwareEngineering</a>
+            <a href="#">WebTechnologies</a>
+            <a href="#">ComputationalStatisticsLab</a>
+            <a href="#">DatabaseManagementSystemsLab</a>
+            <a href="#">WebTechnologiesLab</a>
+            <a href="#">SkillOrientedCourse-II</a>
+            <a href="#">Ethics&HumanValues</a>
+        </div>
+
+        <div id="qp_third_year" class="semester">
+            <h3>Third Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem5')">Semester 5</a>
+            <a onclick="toggleSection('subjects_sem6')">Semester 6</a>
+        </div>
+        
+        <div id="subjects_sem5" class="subjects">
+            <h3>Semester 5 Subjects</h3>
+            <a href="#">AutomataTheory&FormalLanguages</a>
+            <a href="#">ComputerNetworks</a>
+            <a href="#">Design&AnalysisofAlgorithms</a>
+            <a href="#">ProfessionalElective-I</a>
+            <a href="#">Open/Job-orientedElective-I</a>
+            <a href="#">Design&AnalysisofAlgorithmsLab</a>
+            <a href="#">DataAnalysisLab</a>
+            <a href="#">SummerInternship</a>
+            <a href="#">SkillOrientedCourse-III</a> 
+        </div>
+        
+        <div id="subjects_sem6" class="subjects">
+            <h3>Semester 6 Subjects</h3>
+            <a href="#">ArtificialIntelligence</a>
+            <a href="#">Cryptography&NetworkSecurity</a>
+            <a href="#">MachineLearning</a>
+            <a href="#">ProfessionalElective-II</a>
+            <a href="#">Open/JobOrientedElective-II</a>
+            <a href="#">ArtificialIntelligencelab</a>
+            <a href="#">MachineLearningLab</a>
+            <a href="#">TermPaper 0 3 100 - 1.5 PR</a>
+            <a href="#">SkillOrientedCourse-IV</a> 
+        </div>
+
+        <div id="qp_fourth_year" class="semester">
+            <h3>Fourth Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem7')">Semester 7</a>
+            <a onclick="toggleSection('subjects_sem8')">Semester 8</a>
+        </div>
+        
+        <div id="subjects_sem7" class="subjects">
+            <h3>Semester 7 Subjects</h3>
+            <a href="#">HumanitiesandSocialSciences</a>
+            <a href="#">ProfessionalElective-III</a>
+            <a href="#">ProfessionalElective-IV</a>
+            <a href="#">ProfessionalElective–V(MOOCS)</a>
+            <a href="#">Open/JobOrientedElective-III</a>
+            <a href="#">Open/JobOrientedElective –IV</a>
+            <a href="#">Internship/ProfessionalCertification</a>
+            <a href="#">SkillOrientedCourse–V</a>
+        </div>
+        
+        <div id="subjects_sem8" class="subjects">
+            <h3>Semester 8 Subjects</h3>
+            <a href="#">ProjectWork 
+                (ProjectWork,Seminarandinternship)</a>
+        </div>
+        
+        <div id="notes" class="year">
+            <h3>Notes</h3>
+            <a onclick="toggleSection('qp_first_year')">First Year</a>
+            <a onclick="toggleSection('qp_second_year')">Second Year</a>
+            <a onclick="toggleSection('qp_third_year')">Third Year</a>
+            <a onclick="toggleSection('qp_fourth_year')">Fourth Year</a>
+        </div>
+        
+        <div id="qp_first_year" class="semester">
+            <h3>First Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem1')">Semester 1</a>
+            <a onclick="toggleSection('subjects_sem2')">Semester 2</a>
+        </div>
+        
+        <div id="subjects_sem1" class="subjects">
+            <h3>Semester 1 Subjects</h3>
+            <a href="#">Mathematics-I</a>
+            <a href="#">Engineering Physics</a>
+            <a href="#">BasicElectrical&Electronics
+                Engineering</a>
+            <a href="#">Programming for Problem Solving</a>
+            <a href="#">Engineering Physics Lab</a>
+            <a href="#">BasicElectrical&Electronics 
+                EngineeringLab</a>
+            <a href="#">Engineering Graphics and Design Lab</a>
+            <a href="#"> Programming for Problem Solving Lab</a>
+            <a href="#">Constitution of India</a>
+            <a href="#">Three-weeks orientation program</a>
+        </div>
+        
+        <div id="subjects_sem2" class="subjects">
+            <h3>Semester 2 Subjects</h3>
+            <a href="#">Mathematics-II</a>
+            <a href="#">Engineering Chemistry</a>
+            <a href="#">DE</a>
+            <a href="#">EnglishforCommunicationSkills</a>
+            <a href="#">ProgramminginPython</a>
+            <a href="#">EngineeringChemistryLab</a>
+            <a href="#">ProgramminginPythonLab</a>
+            <a href="#">ComputerEngineeringWorkshop</a>
+            <a href="#">EnglishLanguageCommunicationSkills
+                Lab</a>
+            <a href="#">EnvironmentalScience</a>
+        </div>
+        
+        <div id="qp_second_year" class="semester">
+            <h3>Second Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem3')">Semester 3</a>
+            <a onclick="toggleSection('subjects_sem4')">Semester 4</a>
+        </div>
+        
+        <div id="subjects_sem3" class="subjects">
+            <h3>Semester 3 Subjects</h3>
+            <a href="#">ProbabilityandStatistics </a>
+            <a href="#">DiscreteMathematics</a>
+            <a href="#">ComputerOrganization</a>
+            <a href="#">DataStructures </a>
+            <a href="#">ObjectOrientedProgramming</a>
+            <a href="#">ProbabilityandStatisticswithRLab</a>
+            <a href="#">DataStructuresLab </a>
+            <a href="#">ObjectOrientedProgrammingLab</a>
+            <a href="#">SkillOrientedCourse</a>
+            <a href="#"> DesignThinking&ProductInnovation</a>
+        </div>
+        
+        <div id="subjects_sem4" class="subjects">
+            <h3>Semester 4 Subjects</h3>
+            <a href="#">ComputationalStatistics</a>
+            <a href="#">DatabaseManagementSystems</a>
+            <a href="#">OperatingSystems</a>
+            <a href="#">SoftwareEngineering</a>
+            <a href="#">WebTechnologies</a>
+            <a href="#">ComputationalStatisticsLab</a>
+            <a href="#">DatabaseManagementSystemsLab</a>
+            <a href="#">WebTechnologiesLab</a>
+            <a href="#">SkillOrientedCourse-II</a>
+            <a href="#">Ethics&HumanValues</a>
+        </div>
+
+        <div id="qp_third_year" class="semester">
+            <h3>Third Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem5')">Semester 5</a>
+            <a onclick="toggleSection('subjects_sem6')">Semester 6</a>
+        </div>
+        
+        <div id="subjects_sem5" class="subjects">
+            <h3>Semester 5 Subjects</h3>
+            <a href="#">AutomataTheory&FormalLanguages</a>
+            <a href="#">ComputerNetworks</a>
+            <a href="#">Design&AnalysisofAlgorithms</a>
+            <a href="#">ProfessionalElective-I</a>
+            <a href="#">Open/Job-orientedElective-I</a>
+            <a href="#">Design&AnalysisofAlgorithmsLab</a>
+            <a href="#">DataAnalysisLab</a>
+            <a href="#">SummerInternship</a>
+            <a href="#">SkillOrientedCourse-III</a> 
+        </div>
+        
+        <div id="subjects_sem6" class="subjects">
+            <h3>Semester 6 Subjects</h3>
+            <a href="#">ArtificialIntelligence</a>
+            <a href="#">Cryptography&NetworkSecurity</a>
+            <a href="#">MachineLearning</a>
+            <a href="#">ProfessionalElective-II</a>
+            <a href="#">Open/JobOrientedElective-II</a>
+            <a href="#">ArtificialIntelligencelab</a>
+            <a href="#">MachineLearningLab</a>
+            <a href="#">TermPaper 0 3 100 - 1.5 PR</a>
+            <a href="#">SkillOrientedCourse-IV</a> 
+        </div>
+
+        <div id="qp_fourth_year" class="semester">
+            <h3>Fourth Year Semesters</h3>
+            <a onclick="toggleSection('subjects_sem7')">Semester 7</a>
+            <a onclick="toggleSection('subjects_sem8')">Semester 8</a>
+        </div>
+        
+        <div id="subjects_sem7" class="subjects">
+            <h3>Semester 7 Subjects</h3>
+            <a href="#">HumanitiesandSocialSciences</a>
+            <a href="#">ProfessionalElective-III</a>
+            <a href="#">ProfessionalElective-IV</a>
+            <a href="#">ProfessionalElective–V(MOOCS)</a>
+            <a href="#">Open/JobOrientedElective-III</a>
+            <a href="#">Open/JobOrientedElective –IV</a>
+            <a href="#">Internship/ProfessionalCertification</a>
+            <a href="#">SkillOrientedCourse–V</a>
+        </div>
+        
+        <div id="subjects_sem8" class="subjects">
+            <h3>Semester 8 Subjects</h3>
+            <a href="#">ProjectWork 
+                (ProjectWork,Seminarandinternship)</a>
+        </div>
+        <div id="contact" class="year">
+            <h3>Name: M.Sreelatha(</h3>
+            <h3>Contact: 300</h3>
+            <h3>Email: hodcse@rvrjc.ac.in</h3>
+        </div>
+    </div>
+</body>
+</html>
